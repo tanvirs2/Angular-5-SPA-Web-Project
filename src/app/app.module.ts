@@ -1,22 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { RmgerpComponent } from './rmgerp/rmgerp.component';
+import { ThreeDComponent } from './three-d/three-d.component';
+import { VideoComponent } from './video/video.component';
+import { GraphicsComponent } from './graphics/graphics.component';
+import { ThreeDwashingMachineComponent } from './three-dwashing-machine/three-dwashing-machine.component';
+import { ThreeDsolarSystemComponent } from './three-dsolar-system/three-dsolar-system.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    RmgerpComponent,
+    ThreeDComponent,
+    VideoComponent,
+    GraphicsComponent,
+    ThreeDwashingMachineComponent,
+    ThreeDsolarSystemComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      // {path: '', redirectTo: '/home', pathMatch: 'full'},
-      {path: 'home', component: HomeComponent}
+      {path: '', redirectTo: '/home', pathMatch: 'full'},
+      {path: 'home', component: HomeComponent},
+      {path: 'rmg', component: RmgerpComponent},
+      {path: 'threeD', component: ThreeDComponent},
+        {path: 'threeDWashingMachine', component: ThreeDwashingMachineComponent},
+        {path: 'threeDSolarSystem', component: ThreeDsolarSystemComponent},
+      {path: 'video', component: VideoComponent},
+      {path: 'graphics', component: GraphicsComponent},
     ])
   ],
   providers: [],
