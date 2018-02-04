@@ -1,0 +1,25 @@
+.btn {
+    border-radius: 0;
+}
+.btn-default {
+    background: #2c3e50;
+    color: #ffffff;
+    padding: 20px 40px;
+}
+h2>span {
+    color: white;
+}
+
+.sidebar-menu {
+    float: left;
+    width: 19%;
+    height: 100%;
+    position: fixed;
+    background-color: #5f6d7e;
+    color: white;
+    overflow-y: hidden;
+}
+.main-content, .banner-bg {
+    float: right;
+    width: 81%;
+}
