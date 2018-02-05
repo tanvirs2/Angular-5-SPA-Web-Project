@@ -27,7 +27,8 @@ import { ThreeDsolarSystemComponent } from './three-dsolar-system/three-dsolar-s
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      {path: '', redirectTo: '/home', pathMatch: 'full'},
+      //{path: '', redirectTo: '/home', pathMatch: 'full'},
+      {path: '', component: HomeComponent},
       {path: 'home', component: HomeComponent},
       {path: 'rmg', component: RmgerpComponent},
       {path: 'threeD', component: ThreeDComponent},
