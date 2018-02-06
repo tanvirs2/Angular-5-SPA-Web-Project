@@ -10,6 +10,8 @@ import { VideoComponent } from './video/video.component';
 import { GraphicsComponent } from './graphics/graphics.component';
 import { ThreeDwashingMachineComponent } from './three-dwashing-machine/three-dwashing-machine.component';
 import { ThreeDsolarSystemComponent } from './three-dsolar-system/three-dsolar-system.component';
+import { TestComponent } from './test/test.component';
+import {ProfilePageService} from "./profile-page.service";
 
 
 
@@ -22,7 +24,8 @@ import { ThreeDsolarSystemComponent } from './three-dsolar-system/three-dsolar-s
     VideoComponent,
     GraphicsComponent,
     ThreeDwashingMachineComponent,
-    ThreeDsolarSystemComponent
+    ThreeDsolarSystemComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +39,12 @@ import { ThreeDsolarSystemComponent } from './three-dsolar-system/three-dsolar-s
         {path: 'threeDSolarSystem', component: ThreeDsolarSystemComponent},
       {path: 'video', component: VideoComponent},
       {path: 'graphics', component: GraphicsComponent},
+      {path: 'test', component: TestComponent},
     ])
   ],
-  providers: [],
+  providers: [
+    ProfilePageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
