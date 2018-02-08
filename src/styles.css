@@ -1,2 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~izimodal/css/iziModal.min.css";
+
+
+@keyframes mymove {
+  from {
+    bottom: 10px;
+    background: #636e72;
+  }
+  to {bottom: 15px;}
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {bottom: 10px;}
+  to {bottom: 15px;}
+}
+
+.bottom-btn {
+  animation: mymove 0.7s infinite;
+  animation-direction: alternate;
+  -webkit-animation: mymove 0.7s infinite; /* Safari 4.0 - 8.0 */
+  -webkit-animation-direction: alternate;
+  bottom: 10px;
+  right: 20px;
+  position: fixed;
+  font-size: 1.2em;
+  width: 100px;
+  height: 70px;
+  padding: 7px;
+  border: solid 1px #e17055;
+  border-radius: 7px;
+  background: #2d3436;
+  color: #ffffff;
+  z-index: 3;
+  box-shadow: 7px 7px 12px #808080;
+  transition: 0.3s;
+}
+
+.bottom-btn:hover {
+  -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+  animation-play-state: paused;
+  bottom: 9px;
+  right: 18px;
+  background: #636e72;
+  box-shadow: 3px 4px 5px #000000;
+}
+
