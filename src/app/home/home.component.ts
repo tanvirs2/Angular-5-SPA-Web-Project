@@ -1,7 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ProfilePageService } from "../profile-page.service";
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
