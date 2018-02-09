@@ -10,6 +10,10 @@ export class AppComponent implements OnInit {
 
   constructor(){}
 
+  gotoGoogle() : void {
+    window.location.href='https://www.google.com';
+  }
+
   ngOnInit(){
 
   }

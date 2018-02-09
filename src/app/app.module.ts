@@ -12,6 +12,9 @@ import { ThreeDwashingMachineComponent } from './three-dwashing-machine/three-dw
 import { ThreeDsolarSystemComponent } from './three-dsolar-system/three-dsolar-system.component';
 import { TestComponent } from './test/test.component';
 import {ProfilePageService} from "./profile-page.service";
+import { TwoDComponent } from './two-d/two-d.component';
+import { TwoDsweetDreamsComponent } from './two-dsweet-dreams/two-dsweet-dreams.component';
+import { HobbyComponent } from './hobby/hobby.component';
 
 
 
@@ -25,7 +28,10 @@ import {ProfilePageService} from "./profile-page.service";
     GraphicsComponent,
     ThreeDwashingMachineComponent,
     ThreeDsolarSystemComponent,
-    TestComponent
+    TestComponent,
+    TwoDComponent,
+    TwoDsweetDreamsComponent,
+    HobbyComponent
   ],
   imports: [
     BrowserModule,
@@ -37,8 +43,11 @@ import {ProfilePageService} from "./profile-page.service";
       {path: 'threeD', component: ThreeDComponent},
         {path: 'threeDWashingMachine', component: ThreeDwashingMachineComponent},
         {path: 'threeDSolarSystem', component: ThreeDsolarSystemComponent},
-      {path: 'video', component: VideoComponent},
-      {path: 'graphics', component: GraphicsComponent},
+      {path: 'twoD', component: TwoDComponent},
+        {path: 'twoD-sweetDreams', component: TwoDsweetDreamsComponent},
+      {path: 'hobby', component: HobbyComponent},
+        {path: 'video', component: VideoComponent},
+        {path: 'graphics', component: GraphicsComponent},
       {path: 'test', component: TestComponent},
     ])
   ],
