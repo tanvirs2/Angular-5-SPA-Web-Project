@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ContentService} from "./content.service";
 
 
 @Component({
@@ -8,13 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  constructor(){}
+  welcomeContent;
 
-  gotoGoogle() : void {
-    window.location.href='https://www.google.com';
-  }
+  constructor(private content: ContentService){}
 
   ngOnInit(){
-
+    this.welcomeContent = this.content.welcomeContent;
   }
 }

@@ -15,6 +15,7 @@ import {ProfilePageService} from "./profile-page.service";
 import { TwoDComponent } from './two-d/two-d.component';
 import { TwoDsweetDreamsComponent } from './two-dsweet-dreams/two-dsweet-dreams.component';
 import { HobbyComponent } from './hobby/hobby.component';
+import {ContentService} from "./content.service";
 
 
 
@@ -52,7 +53,8 @@ import { HobbyComponent } from './hobby/hobby.component';
     ])
   ],
   providers: [
-    ProfilePageService
+    ProfilePageService,
+    ContentService
   ],
   bootstrap: [AppComponent]
 })
