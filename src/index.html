@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>NgMyWeb</title>
+  <title>Full Stack Web Developer Portfolio, PHP | Javascript | 3D | Graphics </title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,21 +20,32 @@
   <script src="assets/js/min/main.min.js"></script>
 
   <script>
-
     $(function () {
-      $("#welcome-modal").iziModal({
-        title: 'Portfolio Page',
-        subtitle: 'My portfolio <strong>Web Page</strong>',
-        icon: 'fa fa-eercast',
-        width: 1000,
+      $(".under-cons").iziModal({
+        title: 'Construction',
+        subtitle: 'On going...',
+        transitionIn: 'bounceInDown',
+        transitionOut: 'bounceOutDown',
+        transitionInOverlay: 'bounceInUp',
+        transitionOutOverlay: 'bounceOutUp',
+        icon: 'fa fa-cogs',
         radius: 5,
         padding: 20,
         loop: true
       });
+      setTimeout(function() {
+        $("#welcome-modal").iziModal({
+          title: 'Portfolio Page',
+          subtitle: 'My portfolio <strong>WebSite</strong>',
+          icon: 'fa fa-eercast',
+          width: 1000,
+          overlayClose: false,
+          radius: 5,
+          padding: 20
+        });
 
-      $('body').ready(function () {
         $("#welcome-modal").iziModal('open');
-      });
+      }, 500);
     })
 
   </script>

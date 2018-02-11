@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -11,11 +12,12 @@ import { GraphicsComponent } from './graphics/graphics.component';
 import { ThreeDwashingMachineComponent } from './three-dwashing-machine/three-dwashing-machine.component';
 import { ThreeDsolarSystemComponent } from './three-dsolar-system/three-dsolar-system.component';
 import { TestComponent } from './test/test.component';
-import {ProfilePageService} from "./profile-page.service";
 import { TwoDComponent } from './two-d/two-d.component';
 import { TwoDsweetDreamsComponent } from './two-dsweet-dreams/two-dsweet-dreams.component';
 import { HobbyComponent } from './hobby/hobby.component';
-import {ContentService} from "./content.service";
+
+import {ProfilePageService} from "./service/profile-page.service";
+import {ContentService} from "./service/content.service";
 
 
 
@@ -36,6 +38,7 @@ import {ContentService} from "./content.service";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       //{path: '', redirectTo: '/home', pathMatch: 'full'},
       {path: '', component: HomeComponent},

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProfilePageService } from "../profile-page.service";
+import { ProfilePageService} from "../service/profile-page.service";
 
 @Component({
   selector: 'test',

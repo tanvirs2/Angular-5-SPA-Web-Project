@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ContentService} from "./content.service";
-
+import {ContentService} from "./service/content.service";
 
 @Component({
   selector: 'app-root',
@@ -9,11 +8,26 @@ import {ContentService} from "./content.service";
 })
 export class AppComponent implements OnInit {
 
-  welcomeContent;
+  public edited = false;
+  saveTodos(): void {
+    //show box msg
+    this.edited = true;
+    //wait 3 Seconds and hide
+    setTimeout(function() {
+      this.edited = false;
+      console.log(this.edited);
+    }.bind(this), 2000);
+  }
+
+  public welcomeContent;
 
   constructor(private content: ContentService){}
 
   ngOnInit(){
-    this.welcomeContent = this.content.welcomeContent;
+    this.content.getData('/welcome').subscribe((data: any) => {
+      this.welcomeContent = data.welcomeMsg;
+    });
+
+    this.saveTodos();
   }
 }
