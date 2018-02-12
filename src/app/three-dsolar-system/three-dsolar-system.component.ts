@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ContentService} from "../service/content.service";
 
 @Component({
   selector: 'app-three-dsolar-system',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThreeDsolarSystemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private content: ContentService) { }
 
-  ngOnInit() {
+  solarContent;
+  ngOnInit(){
+    this.content.getData('/homePage/index/5').subscribe((data:any)=>{
+      this.solarContent = data;
+      console.log(data);
+    });
   }
 
 }

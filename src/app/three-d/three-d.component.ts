@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ContentService} from "../service/content.service";
 
 @Component({
   selector: 'app-three-d',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThreeDComponent implements OnInit {
 
-  constructor() { }
+  constructor(private content: ContentService) { }
 
-  ngOnInit() {
+  threeContent;
+  ngOnInit(){
+    this.content.getData('/homePage/index/3').subscribe((data:any)=>{
+      this.threeContent = data;
+      console.log(data);
+    });
   }
 
 }

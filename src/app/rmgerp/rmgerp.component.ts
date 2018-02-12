@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ContentService} from "../service/content.service";
 
 @Component({
   selector: 'app-rmgerp',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RmgerpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private content: ContentService) { }
 
-  ngOnInit() {
+  rmgContent;
+  ngOnInit(){
+    this.content.getData('/homePage/index/2').subscribe((data:any)=>{
+      this.rmgContent = data;
+      console.log(data);
+    });
   }
 
 }

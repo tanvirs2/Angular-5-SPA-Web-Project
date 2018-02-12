@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ContentService} from "../service/content.service";
 
 @Component({
   selector: 'app-three-dwashing-machine',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThreeDwashingMachineComponent implements OnInit {
 
-  constructor() { }
+  constructor(private content: ContentService) { }
 
-  ngOnInit() {
+  washingContent;
+  ngOnInit(){
+    this.content.getData('/homePage/index/4').subscribe((data:any)=>{
+      this.washingContent = data;
+      console.log(data);
+    });
   }
 
 }

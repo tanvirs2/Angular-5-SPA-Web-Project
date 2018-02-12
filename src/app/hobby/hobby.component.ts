@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ContentService} from "../service/content.service";
 
 @Component({
   selector: 'app-hobby',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HobbyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private content: ContentService) { }
 
-  ngOnInit() {
+  hobbyContent;
+  ngOnInit(){
+    this.content.getData('/homePage/index/8').subscribe((data:any)=>{
+      this.hobbyContent = data;
+      console.log(data);
+    });
   }
 
 }

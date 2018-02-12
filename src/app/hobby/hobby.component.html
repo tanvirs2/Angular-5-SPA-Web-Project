@@ -28,15 +28,7 @@
             <div class="about-image">
               <img src="assets/img/8.jpg" alt="about me">
             </div>
-            <p>
-              A great experienced and creative web developer with <b>three</b> years’
-              experience in a variety of exciting projects. A level head and
-              rational approach to problem solving combined with a passion for
-              innovative and fresh ideas has led to a portfolio of impressive website
-              and web application solutions. Technically competent and industry aware
-              means that each project is undertaken with the most up-to-date and relevant
-              programming foundations available.
-            </p>
+            <p [innerHtml]="hobbyContent?.aboutMe"></p>
             <hr>
           </div>
         </div> <!-- #about -->
@@ -47,7 +39,7 @@
         <div class="row">
           <div class="col-md-12">
             <h4 class="widget-title">PHOTOS OF WHAT I DO</h4>
-            <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Maecenas et lorem molestie, maximus justo dignissim, cursus nisl. Nullam at ante quis ex pharetra pulvinar quis id dolor. Integer lorem odio, euismod ut sem sit amet, imperdiet condimentum diam.</p>
+            <p [innerHtml]="hobbyContent?.what_iDo"></p>
           </div>
         </div>
         <div class="row projects-holder">
@@ -126,7 +118,7 @@
         <div class="row">
           <div class="col-md-12">
             <h4 class="widget-title">PLACE TO TALK WITH ME</h4>
-            <p>Vestibulum ac iaculis erat, in semper dolor. Maecenas et lorem molestie, maximus justo dignissim, cursus nisl. Nullam at ante quis ex pharetra pulvinar quis id dolor. Integer lorem odio, euismod ut sem sit amet, imperdiet condimentum diam.</p>
+            <p [innerHtml]="hobbyContent?.talkWithMe"></p>
           </div>
         </div>
         <div class="row">

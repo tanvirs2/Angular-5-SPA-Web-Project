@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ContentService} from "../service/content.service";
 
 @Component({
   selector: 'app-two-dsweet-dreams',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoDsweetDreamsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private content: ContentService) { }
 
-  ngOnInit() {
+  sweet2DContent;
+  ngOnInit(){
+    this.content.getData('/homePage/index/7').subscribe((data:any)=>{
+      this.sweet2DContent = data;
+      console.log(data);
+    });
   }
 
 }

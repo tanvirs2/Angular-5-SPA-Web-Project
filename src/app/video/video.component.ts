@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ContentService} from "../service/content.service";
 
 @Component({
   selector: 'app-video',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private content: ContentService) { }
 
-  ngOnInit() {
+  videoContent;
+  ngOnInit(){
+    this.content.getData('/homePage/index/9').subscribe((data:any)=>{
+      this.videoContent = data;
+      console.log(data);
+    });
   }
 
 }

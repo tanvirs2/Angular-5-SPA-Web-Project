@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ContentService} from "../service/content.service";
 
 @Component({
   selector: 'app-graphics',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraphicsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private content: ContentService) { }
 
-  ngOnInit() {
+  graphicsContent;
+  ngOnInit(){
+    this.content.getData('/homePage/index/10').subscribe((data:any)=>{
+      this.graphicsContent = data;
+      console.log(data);
+    });
   }
 
 }

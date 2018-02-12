@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ContentService} from "./service/content.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -8,26 +8,22 @@ import {ContentService} from "./service/content.service";
 })
 export class AppComponent implements OnInit {
 
-  public edited = false;
+  public edited = 0;
   saveTodos(): void {
     //show box msg
-    this.edited = true;
+    this.edited = 0;
     //wait 3 Seconds and hide
     setTimeout(function() {
-      this.edited = false;
+      this.edited = 1;
       console.log(this.edited);
-    }.bind(this), 2000);
+    }.bind(this), 3000);
   }
 
-  public welcomeContent;
+  constructor(private route: Router) {
+    //console.log(this.route.isActive('test', true));
+  }
 
-  constructor(private content: ContentService){}
-
-  ngOnInit(){
-    this.content.getData('/welcome').subscribe((data: any) => {
-      this.welcomeContent = data.welcomeMsg;
-    });
-
-    this.saveTodos();
+  ngOnInit() {
+    //this.saveTodos();
   }
 }

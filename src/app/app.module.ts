@@ -18,6 +18,8 @@ import { HobbyComponent } from './hobby/hobby.component';
 
 import {ProfilePageService} from "./service/profile-page.service";
 import {ContentService} from "./service/content.service";
+import { FrontEndComponent } from './front-end/front-end.component';
+import { BackEndComponent } from './back-end/back-end.component';
 
 
 
@@ -34,7 +36,9 @@ import {ContentService} from "./service/content.service";
     TestComponent,
     TwoDComponent,
     TwoDsweetDreamsComponent,
-    HobbyComponent
+    HobbyComponent,
+    FrontEndComponent,
+    BackEndComponent
   ],
   imports: [
     BrowserModule,

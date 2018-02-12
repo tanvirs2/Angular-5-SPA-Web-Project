@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ProfilePageService} from "../service/profile-page.service";
+import {ContentService} from "../service/content.service";
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,15 @@ import { ProfilePageService} from "../service/profile-page.service";
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
-  constructor(private proPage: ProfilePageService) { }
+  constructor(private proPage: ProfilePageService, private content: ContentService) { }
 
+  homeContent;
   ngAfterViewInit(){
+    this.content.getData('/homePage/index/1').subscribe((data:any)=>{
+      this.homeContent = data;
+      console.log(data);
+    });
+
     this.proPage.menuFunc({
       selection: "#top",
       defText: 'Project View',
