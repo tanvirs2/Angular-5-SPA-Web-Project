@@ -97,3 +97,8 @@ h2>span {
   width: 81%;
 }
 
+.banner-overlay > div {
+  height: 100%;
+  background: url("assets/img/gif/ajax-loader.gif") center center no-repeat;
+}
+

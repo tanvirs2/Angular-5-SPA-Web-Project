@@ -20,6 +20,7 @@ import {ProfilePageService} from "./service/profile-page.service";
 import {ContentService} from "./service/content.service";
 import { FrontEndComponent } from './front-end/front-end.component';
 import { BackEndComponent } from './back-end/back-end.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -38,7 +39,8 @@ import { BackEndComponent } from './back-end/back-end.component';
     TwoDsweetDreamsComponent,
     HobbyComponent,
     FrontEndComponent,
-    BackEndComponent
+    BackEndComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +58,7 @@ import { BackEndComponent } from './back-end/back-end.component';
       {path: 'hobby', component: HobbyComponent},
         {path: 'video', component: VideoComponent},
         {path: 'graphics', component: GraphicsComponent},
+      {path: '**', component: PageNotFoundComponent},
       {path: 'test', component: TestComponent},
     ])
   ],

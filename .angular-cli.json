@@ -22,7 +22,8 @@
         "styles.css"
       ],
       "scripts": [
-        "../node_modules/izimodal/js/iziModal.min.js"
+        "../node_modules/izimodal/js/iziModal.min.js",
+        "../node_modules/intro.js/minified/intro.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

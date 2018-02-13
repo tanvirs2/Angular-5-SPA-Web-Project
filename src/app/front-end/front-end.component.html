@@ -99,11 +99,27 @@
         </strong>
       </h1>
       <hr>
-      <div [innerHtml]="welcomeContent"></div>
+      <div>
+        <div *ngIf="welcomeContent;else other_content" [innerHtml]="welcomeContent"></div>
+        <ng-template #other_content>! Before starting any given page, you really need to know that, this website build with Angular5 (client-side JS framework). and backend API build with Laravel5 (Server-side PHP framework). Over the three years of developing Web Application for job purpose, I’ve learned that the age-old adage</ng-template>
+      </div>
     </article>
   </div>
 
 </div>
+
+
+<div style="display: none" id="tutorial">
+
+  <div class="">
+    <article class="text-center">
+      <h1 style="animation: pulse 1.5s infinite; font-size: 2.5em">Tutorial Complete</h1>
+    </article>
+  </div>
+
+</div>
+
+
 <div style="display: none;" class="under-cons">
   <h1 style="animation: pulse 1.5s infinite; font-family: 'monospace'" class="text-center text-danger h1">
     SORRY !
