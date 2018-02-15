@@ -20,10 +20,25 @@
   <script src="assets/js/min/plugins.min.js"></script>
   <script src="assets/js/min/main.min.js"></script>
 
-
+  <div id="web-loading" class="text-center">
+    <div>
+      <img src="assets/img/gif/ring-alt.svg" alt="">
+      <h2 class="h2">LOADING</h2>
+    </div>
+  </div>
 
   <script>
+  $(window).on('load', function () {
+    $('#web-loading').fadeOut('slow');
+
     $(function () {
+      $("#tutorial").iziModal({
+        title: 'Notification',
+        icon: 'fa fa-book',
+        radius: 10,
+        padding: 100,
+      });
+
       $(".under-cons").iziModal({
         title: 'Construction',
         subtitle: 'On going...',
@@ -44,30 +59,33 @@
           width: 1000,
           overlayClose: false,
           radius: 5,
+          padding: 20,
+
           onClosed: function(){
+            var lastElem;
             introJs()
               .setOption("overlayOpacity", 1)
               .setOption("exitOnOverlayClick", false)
-              .setOption("disableInteraction", false)
-              .oncomplete(function() {
+              .setOption("exitOnEsc", false)
+              .onchange(function(targetElement) {
+                lastElem = targetElement;
+                $(targetElement).prop('disabled', true);
+                $(targetElement).prev().prop('disabled', false);
 
-              $("#tutorial").iziModal({
-                title: 'Notification',
-                icon: 'fa fa-book',
-                radius: 10,
-                padding: 100,
-              });
-
-              $("#tutorial").iziModal('open');
+                $(document).on('click', '.introjs-skipbutton', function () {
+                  $(targetElement).prop('disabled', false);
+                });
+              }).oncomplete(function() {
+                $(lastElem).prop('disabled', false);
+                $("#tutorial").iziModal('open');
             }).start();
-          },
-          padding: 20
+          }
         });
 
         $("#welcome-modal").iziModal('open');
       }, 1000);
-    })
-
+    });
+  });
   </script>
 </body>
 </html>
