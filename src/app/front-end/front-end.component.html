@@ -100,8 +100,8 @@
       </h1>
       <hr>
       <div>
-        <div *ngIf="welcomeContent;else other_content" [innerHtml]="welcomeContent"></div>
-        <ng-template #other_content>! Before starting any given page, you really need to know that, this website build with Angular5 (client-side JS framework). and backend API build with Laravel5 (Server-side PHP framework). Over the three years of developing Web Application for job purpose, I’ve learned that the age-old adage</ng-template>
+        <div [innerHtml]="welcomeContent?.welcomeMsg"></div>
+
       </div>
     </article>
   </div>

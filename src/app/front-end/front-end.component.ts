@@ -14,7 +14,7 @@ export class FrontEndComponent implements OnInit {
 
   ngOnInit(){
     this.content.getData('/welcome').subscribe((data: any) => {
-      this.welcomeContent = data.welcomeMsg;
+      this.welcomeContent = data;
     });
   }
 }
