@@ -79,7 +79,7 @@ export class FrontEndComponent implements OnInit, AfterViewInit {
         });
 
         $("#welcome-modal").iziModal('open');
-      }, 1000);
+      }, 1500);
     });
   }
 }
