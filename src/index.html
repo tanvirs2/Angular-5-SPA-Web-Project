@@ -67,7 +67,9 @@
               $("html, body").animate({ scrollTop: 0 }, "slow");
             },
             onClosed: function(){ //iziModal on closed
-              $("body").css("overflow", "hidden");
+              if ($('body').find('[data-intro]').length > 0) {
+                $("body").css("overflow", "hidden");
+              }
               var lastElem;
               introJs()           //intro JS start
                 .setOption("overlayOpacity", 1)
