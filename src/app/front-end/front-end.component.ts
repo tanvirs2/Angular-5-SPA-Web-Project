@@ -53,9 +53,9 @@ export class FrontEndComponent implements OnInit {
           radius: 5,
           padding: 20,
 
-          onClosed: function(){
+          onClosed: function(){ //iziModal on closed
             var lastElem;
-            introJs()
+            introJs()           //intro JS start
               .setOption("overlayOpacity", 1)
               .setOption("exitOnOverlayClick", false)
               .setOption("exitOnEsc", false)
@@ -70,7 +70,7 @@ export class FrontEndComponent implements OnInit {
               }).oncomplete(function() {
               $(lastElem).prop('disabled', false);
               $("#tutorial").iziModal('open');
-            }).start();
+            }).start(); //intro JS complete
           }
         });
 
