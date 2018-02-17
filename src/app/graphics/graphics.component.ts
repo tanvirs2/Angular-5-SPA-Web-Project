@@ -14,7 +14,6 @@ export class GraphicsComponent implements OnInit {
   ngOnInit(){
     this.content.getData('/homePage/index/10').subscribe((data:any)=>{
       this.graphicsContent = data;
-      console.log(data);
     });
   }
 

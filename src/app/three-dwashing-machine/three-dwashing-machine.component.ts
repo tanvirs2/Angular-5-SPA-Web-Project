@@ -14,7 +14,6 @@ export class ThreeDwashingMachineComponent implements OnInit {
   ngOnInit(){
     this.content.getData('/homePage/index/4').subscribe((data:any)=>{
       this.washingContent = data;
-      console.log(data);
     });
   }
 

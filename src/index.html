@@ -31,24 +31,24 @@
   $(window).on('load', function () {
     $('#web-loading').fadeOut('slow', function () {
         $(function () {
-        $("#tutorial").iziModal({
-          title: 'Notification',
-          icon: 'fa fa-book',
-          radius: 10,
-          padding: 100,
-        });
-        $(".under-cons").iziModal({
-          title: 'Construction',
-          subtitle: 'On going...',
-          transitionIn: 'bounceInDown',
-          transitionOut: 'bounceOutDown',
-          transitionInOverlay: 'bounceInUp',
-          transitionOutOverlay: 'bounceOutUp',
-          icon: 'fa fa-cogs',
-          radius: 5,
-          padding: 20,
-          loop: true
-        });
+          $("#tutorial").iziModal({
+            title: 'Notification',
+            icon: 'fa fa-book',
+            radius: 10,
+            padding: 100,
+          });
+          $(".under-cons").iziModal({
+            title: 'Construction',
+            subtitle: 'On going...',
+            transitionIn: 'bounceInDown',
+            transitionOut: 'bounceOutDown',
+            transitionInOverlay: 'bounceInUp',
+            transitionOutOverlay: 'bounceOutUp',
+            icon: 'fa fa-cogs',
+            radius: 5,
+            padding: 20,
+            loop: true
+          });
         setTimeout(function() {
           $("#welcome-modal").iziModal({
             title: 'Portfolio Page',
@@ -58,8 +58,9 @@
             overlayClose: false,
             radius: 5,
             padding: 20,
-
             onClosed: function(){ //iziModal on closed
+              $("html, body").animate({ scrollTop: 0 }, "slow");
+              $("body").css("overflow", "hidden");
               var lastElem;
               introJs()           //intro JS start
                 .setOption("overlayOpacity", 1)
@@ -72,9 +73,11 @@
 
                   $(document).on('click', '.introjs-skipbutton', function () {
                     $(targetElement).prop('disabled', false);
+                    $("body").css("overflow", "auto");
                   });
                 }).oncomplete(function() {
                 $(lastElem).prop('disabled', false);
+                $("body").css("overflow", "auto");
                 $("#tutorial").iziModal('open');
               }).start(); //intro JS complete
             }

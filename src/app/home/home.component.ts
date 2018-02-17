@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(){
     this.content.getData('/homePage/index/1').subscribe((data:any)=>{
       this.homeContent = data;
-      console.log(data);
     });
 
     this.proPage.menuFunc({

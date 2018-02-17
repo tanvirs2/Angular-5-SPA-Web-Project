@@ -14,7 +14,6 @@ export class ThreeDComponent implements OnInit {
   ngOnInit(){
     this.content.getData('/homePage/index/3').subscribe((data:any)=>{
       this.threeContent = data;
-      console.log(data);
     });
   }
 

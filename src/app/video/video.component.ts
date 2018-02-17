@@ -14,7 +14,6 @@ export class VideoComponent implements OnInit {
   ngOnInit(){
     this.content.getData('/homePage/index/9').subscribe((data:any)=>{
       this.videoContent = data;
-      console.log(data);
     });
   }
 

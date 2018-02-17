@@ -14,7 +14,6 @@ export class RmgerpComponent implements OnInit {
   ngOnInit(){
     this.content.getData('/homePage/index/2').subscribe((data:any)=>{
       this.rmgContent = data;
-      console.log(data);
     });
   }
 

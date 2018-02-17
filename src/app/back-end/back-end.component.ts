@@ -14,7 +14,6 @@ export class BackEndComponent implements OnInit {
   ngOnInit(){
     this.content.getData('/homePage/index/1').subscribe((data:any)=>{
       this.homeContent = data;
-      console.log(data);
     });
   }
 

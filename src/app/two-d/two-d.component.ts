@@ -14,8 +14,6 @@ export class TwoDComponent implements OnInit {
   ngOnInit(){
     this.content.getData('/homePage/index/6').subscribe((data:any)=>{
       this.twoDContent = data;
-      console.log(data);
     });
   }
-
 }

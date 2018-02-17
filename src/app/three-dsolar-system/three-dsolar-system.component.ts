@@ -14,7 +14,6 @@ export class ThreeDsolarSystemComponent implements OnInit {
   ngOnInit(){
     this.content.getData('/homePage/index/5').subscribe((data:any)=>{
       this.solarContent = data;
-      console.log(data);
     });
   }
 

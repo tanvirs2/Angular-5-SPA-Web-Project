@@ -14,7 +14,6 @@ export class TwoDsweetDreamsComponent implements OnInit {
   ngOnInit(){
     this.content.getData('/homePage/index/7').subscribe((data:any)=>{
       this.sweet2DContent = data;
-      console.log(data);
     });
   }
 

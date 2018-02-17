@@ -14,7 +14,6 @@ export class HobbyComponent implements OnInit {
   ngOnInit(){
     this.content.getData('/homePage/index/8').subscribe((data:any)=>{
       this.hobbyContent = data;
-      console.log(data);
     });
   }
 
