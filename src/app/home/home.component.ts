@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   constructor(private proPage: ProfilePageService, private content: ContentService) { }
 
-  homeContent;
+  public homeContent;
   ngAfterViewInit(){
     this.content.getData('/homePage/index/1').subscribe((data:any)=>{
       this.homeContent = data;
