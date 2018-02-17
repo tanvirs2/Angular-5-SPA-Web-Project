@@ -58,8 +58,15 @@
             overlayClose: false,
             radius: 5,
             padding: 20,
-            onClosed: function(){ //iziModal on closed
+            transitionIn:	'bounceInUp',
+            transitionInOverlay: 'bounceInUp',
+            onOpening: function(){
+              $("html, body").animate({ scrollTop: (50/100)*$(document).height() }, 1500);
+            },
+            onClosing: function () {
               $("html, body").animate({ scrollTop: 0 }, "slow");
+            },
+            onClosed: function(){ //iziModal on closed
               $("body").css("overflow", "hidden");
               var lastElem;
               introJs()           //intro JS start
