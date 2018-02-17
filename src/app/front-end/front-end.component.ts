@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {ContentService} from "../service/content.service";
 
 declare var $: any;
@@ -9,7 +9,7 @@ declare var introJs: any;
   templateUrl: './front-end.component.html',
   styleUrls: ['./front-end.component.css']
 })
-export class FrontEndComponent implements OnInit {
+export class FrontEndComponent implements OnInit, AfterViewInit {
 
   public welcomeContent;
 
@@ -18,8 +18,12 @@ export class FrontEndComponent implements OnInit {
   ngOnInit(){
     this.content.getData('/welcome').subscribe((data: any) => {
       this.welcomeContent = data;
-      this.welcomeModal();
     });
+  }
+
+  ngAfterViewInit(){
+    $('#web-loading').fadeOut('slow');
+    this.welcomeModal();
   }
 
   welcomeModal(){
