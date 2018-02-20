@@ -50,12 +50,10 @@
   </div> <!-- .main-navigation -->
   <div class="social-icons">
     <ul>
-      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-      <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-      <li><a href="#"><i class="fa fa-rss"></i></a></li>
+      <li><a target="_blank" href="https://www.facebook.com/tanvirs2"><i class="fa fa-facebook"></i></a></li>
+      <li><a target="_blank" href="https://twitter.com/TanvirSarker"><i class="fa fa-twitter"></i></a></li>
+      <li><a target="_blank" href="https://www.linkedin.com/in/tanvir-sarker-b22157110"><i class="fa fa-linkedin"></i></a></li>
+      <li><a target="_blank" href="https://plus.google.com/100255087773881450192"><i class="fa fa-google-plus"></i></a></li>
     </ul>
   </div> <!-- .social-icons -->
 </div> <!-- .sidebar-menu -->
@@ -100,7 +98,7 @@
       </h1>
       <hr>
       <div>
-        <div [innerHtml]="welcomeContent?.welcomeMsg"></div>
+        <div id="wel-msg" [innerHtml]="welcomeContent?.welcomeMsg"></div>
       </div>
     </article>
   </div>
@@ -110,9 +108,20 @@
 
 <div style="display: none" id="tutorial">
 
-  <div class="">
-    <article class="text-center">
-      <h1 style="animation: pulse 1.5s infinite; font-size: 2.5em">Tutorial Complete</h1>
+  <div class="welcome-page">
+    <span>
+      <p class="lead">
+        Surfing any of the project pages in the right bottom corner will
+        see the Button to view the project in full page in the new Tab.
+      </p>
+    </span>
+    <article class="">
+      <!--<h1 class="h3">Tutorial Complete</h1>-->
+      <a href="#">
+        <div class="notify-btn text-center"><i class="fa fa-th-list"></i>
+          <div>Large View</div>
+        </div>
+      </a>
     </article>
   </div>
 

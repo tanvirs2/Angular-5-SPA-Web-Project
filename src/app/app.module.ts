@@ -21,6 +21,7 @@ import {ContentService} from "./service/content.service";
 import { FrontEndComponent } from './front-end/front-end.component';
 import { BackEndComponent } from './back-end/back-end.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -40,7 +41,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HobbyComponent,
     FrontEndComponent,
     BackEndComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
