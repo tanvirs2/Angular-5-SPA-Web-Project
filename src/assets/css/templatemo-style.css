@@ -429,7 +429,15 @@ h3.profile-title {
   background-size: cover;
   z-index: 2;
 }
-
+.hobby-banner-bg {
+  background: url("../../assets/img/hobby/hobby_banner.jpg");
+}
+.threeD-banner-bg {
+  background: url("../../assets/img/3D/3D_banner.jpg");
+}
+.twoD-banner-bg {
+  background: url("../../assets/img/2D/2D_banner.jpg");
+}
 .banner-overlay {
   position: absolute;
   width: 100%;
@@ -443,6 +451,7 @@ h3.profile-title {
 .welcome-text {
   position: absolute;
   z-index: 4;
+  text-shadow: 2px 2px 8px #000000;
 }
 .welcome-text h2 {
   font-size: 42px;
