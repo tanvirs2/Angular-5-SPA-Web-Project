@@ -22,6 +22,7 @@ import { FrontEndComponent } from './front-end/front-end.component';
 import { BackEndComponent } from './back-end/back-end.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactComponent } from './contact/contact.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -46,6 +47,7 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
       //{path: '', redirectTo: '/home', pathMatch: 'full'},
