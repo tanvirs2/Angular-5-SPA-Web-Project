@@ -22,7 +22,8 @@
         <textarea ngModel name="senderMsg" id="message" cols="30" rows="6" placeholder="Leave your message..."></textarea>
       </fieldset>
       <fieldset class="col-md-12 col-sm-12">
-        <input type="submit" class="button big default" value="Send Message">
+        <input (click)="sendBtn()" type="button" class="button big default" value="Send Message">
+        <input type="submit" id="visitor-msg-submit" style="display: none">
       </fieldset>
     </form>
   </div> <!-- .contact-form -->
@@ -32,5 +33,16 @@
 <div class="row" id="footer">
   <div class="col-md-12 text-center">
     <p class="copyright-text">&copy; 2018 Tanvir Sarker</p>
+  </div>
+</div>
+
+<div style="display: none;" class="" id="captcha-modal">
+  <div>
+    <div class="form-group text-center text-primary">
+      <div class="h1">5 + 5</div>
+      <input class="form-control center-block" type="text" style="width: 100px">
+      <br>
+      <button class="btn btn-lg btn-danger" type="button" >Check</button>
+    </div>
   </div>
 </div>

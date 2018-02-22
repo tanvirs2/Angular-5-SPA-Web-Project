@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
+
 @Injectable()
 export class ContentService {
 
-  server = 'http://localhost/myWebLaravel/public/api';
-  //server = 'http://tanvirpro.com/all_project/api/public/api';
+  //server = 'http://localhost/myWebLaravel/public/api';
+  server = 'http://tanvirpro.com/all_project/api/public/api';
 
   constructor(public http: HttpClient) {}
 
