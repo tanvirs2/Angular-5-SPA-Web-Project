@@ -8,6 +8,9 @@ import {ContentService} from "../service/content.service";
 })
 export class TwoDsweetDreamsComponent implements OnInit {
 
+  twoDImgHead = 'Raw JavaScript | JS';
+  twoDImgBody = 'Making this interactive graphics with use of JS technically. Graphics programming on the WEB';
+
   constructor(private content: ContentService) { }
 
   sweet2DContent;

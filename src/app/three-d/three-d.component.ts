@@ -8,6 +8,12 @@ import {ContentService} from "../service/content.service";
 })
 export class ThreeDComponent implements OnInit {
 
+  pageOf3DHead = 'WebGL | 3D API';
+  pageOf3DBody =
+    'WebGL (Web Graphics Library) is a JavaScript API for rendering ' +
+    'interactive 2D and 3D graphics within any compatible web browser ' +
+    'without the use of plug-ins.';
+
   constructor(private content: ContentService) { }
 
   threeContent;

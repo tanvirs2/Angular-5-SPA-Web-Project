@@ -8,6 +8,9 @@ import {ContentService} from "../service/content.service";
 })
 export class ThreeDsolarSystemComponent implements OnInit {
 
+  threeDImgHead = 'threeJS | WebGL';
+  threeDImgBody = 'Build this system with WebGL graphics programming 3D-Api on the WEB';
+
   constructor(private content: ContentService) { }
 
   solarContent;

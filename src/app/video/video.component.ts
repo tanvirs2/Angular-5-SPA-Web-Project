@@ -8,6 +8,9 @@ import {ContentService} from "../service/content.service";
 })
 export class VideoComponent implements OnInit {
 
+  vdoThumbHead = 'Video Making';
+  vdoThumbBody = 'Project screenshots from video';
+
   constructor(private content: ContentService) { }
 
   videoContent;

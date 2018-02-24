@@ -8,6 +8,9 @@ import {ContentService} from "../service/content.service";
 })
 export class RmgerpComponent implements OnInit {
 
+  erpImgHead = 'RMG-ERP';
+  erpImgBody = 'System Screenshots of the RMG ERP Application\'s inside';
+
   constructor(private content: ContentService) { }
 
   rmgContent;

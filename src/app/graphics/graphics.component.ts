@@ -8,6 +8,9 @@ import {ContentService} from "../service/content.service";
 })
 export class GraphicsComponent implements OnInit {
 
+  grphThumbHead = 'Graphics Design';
+  grphThumbBody = 'Some of my graphics creations with PhotoShop';
+
   constructor(private content: ContentService) { }
 
   graphicsContent;

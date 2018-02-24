@@ -8,6 +8,9 @@ import {ContentService} from "../service/content.service";
 })
 export class ThreeDwashingMachineComponent implements OnInit {
 
+  threeDImgHead = 'threeJS | WebGL';
+  threeDImgBody = 'Build this system with WebGL 3D-Api on the WEB';
+
   constructor(private content: ContentService) { }
 
   washingContent;
