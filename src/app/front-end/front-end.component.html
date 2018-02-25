@@ -62,7 +62,6 @@
   <style>
     div.welcome-page {
       width: 100%;
-    //border: 1px solid gray;
     }
 
     .welcome-page span {
@@ -76,7 +75,6 @@
     .welcome-page article {
       animation: pulse 1.5s;
       margin-left: 350px;
-    //border-left: 1px solid gray;
       padding: 1em;
       overflow: hidden;
     }
@@ -98,7 +96,7 @@
       </h1>
       <hr>
       <div>
-        <div id="wel-msg" [innerHtml]="welcomeContent?.welcomeMsg"></div>
+        <div style="font-size: 1.3em" id="wel-msg" [innerHtml]="welcomeContent?.welcomeMsg"></div>
       </div>
     </article>
   </div>

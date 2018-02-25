@@ -32,7 +32,7 @@
     $('#web-loading').fadeOut('slow', function(){
       var welMsgInterval = setInterval(function(){
         if ($("#wel-msg").text().trim().length > 10){
-          //$("#welcome-modal").iziModal('open');
+          $("#welcome-modal").iziModal('open');
           clearInterval(welMsgInterval);
         }
       }, 1000);
