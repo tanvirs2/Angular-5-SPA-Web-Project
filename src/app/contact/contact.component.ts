@@ -45,6 +45,7 @@ export class ContactComponent implements OnInit {
   onSubmit(fm: NgForm){
     this.contentService.postData('/welcome', fm.value)
       .subscribe(res => {
+        fm.reset();
         $("#success-alert").iziModal({
           title: "Successful",
           subtitle: 'Successfully send your message..',
