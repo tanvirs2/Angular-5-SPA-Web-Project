@@ -71,15 +71,17 @@ export class FrontEndComponent implements OnInit {
           }
           var lastElem;
           introJs()           //intro JS start
-            .setOption("overlayOpacity", 1)
+            //.setOption("overlayOpacity", 0.6)
             .setOption("exitOnOverlayClick", false)
             .setOption("exitOnEsc", false)
             .onchange(function(targetElement) {
               lastElem = targetElement;
-              $(targetElement).prop('disabled', true);
+              $(targetElement).find('button').prop('disabled', true);
+              //$(targetElement).prop('disabled', true);
               $(targetElement).prev().prop('disabled', false);
 
               $(document).on('click', '.introjs-skipbutton', function () {
+                $(targetElement).find('button').prop('disabled', false);
                 $(targetElement).prop('disabled', false);
                 $("body").css("overflow", "auto");
               });

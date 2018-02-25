@@ -119,7 +119,7 @@ h2>span {
   background: url("assets/img/gif/ajax-loader.gif") center center no-repeat;
 }
 .welcome-text button:disabled {
-  background: #16a085;
+  background: #2c3e50;
 }
 
 #web-loading {
