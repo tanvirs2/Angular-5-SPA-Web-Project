@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ContentService} from "../service/content.service";
+import {fade} from "../animation";
 
 @Component({
   selector: 'app-two-dsweet-dreams',
   templateUrl: './two-dsweet-dreams.component.html',
-  styleUrls: ['./two-dsweet-dreams.component.css']
+  styleUrls: ['./two-dsweet-dreams.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class TwoDsweetDreamsComponent implements OnInit {
 

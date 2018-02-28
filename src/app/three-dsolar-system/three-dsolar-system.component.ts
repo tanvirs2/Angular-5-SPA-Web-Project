@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ContentService} from "../service/content.service";
+import {fade} from "../animation";
 
 @Component({
   selector: 'app-three-dsolar-system',
   templateUrl: './three-dsolar-system.component.html',
-  styleUrls: ['./three-dsolar-system.component.css']
+  styleUrls: ['./three-dsolar-system.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class ThreeDsolarSystemComponent implements OnInit {
 

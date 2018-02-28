@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ContentService} from "../service/content.service";
+import {fade} from "../animation";
 
 @Component({
   selector: 'app-two-d',
   templateUrl: './two-d.component.html',
-  styleUrls: ['./two-d.component.css']
+  styleUrls: ['./two-d.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class TwoDComponent implements OnInit {
 

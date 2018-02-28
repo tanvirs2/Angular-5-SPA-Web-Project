@@ -1,11 +1,15 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ProfilePageService} from "../service/profile-page.service";
 import {ContentService} from "../service/content.service";
+import {fade} from "../animation";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 

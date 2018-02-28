@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ContentService} from "../service/content.service";
+import {fade} from "../animation";
 
 @Component({
   selector: 'app-three-d',
   templateUrl: './three-d.component.html',
-  styleUrls: ['./three-d.component.css']
+  styleUrls: ['./three-d.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class ThreeDComponent implements OnInit {
 

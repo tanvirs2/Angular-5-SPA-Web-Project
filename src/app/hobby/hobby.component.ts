@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ContentService} from "../service/content.service";
+import {fade} from "../animation";
 
 @Component({
   selector: 'app-hobby',
   templateUrl: './hobby.component.html',
-  styleUrls: ['./hobby.component.css']
+  styleUrls: ['./hobby.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class HobbyComponent implements OnInit {
 

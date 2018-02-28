@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ContentService} from "../service/content.service";
+import {fade} from "../animation";
 
 @Component({
   selector: 'app-rmgerp',
   templateUrl: './rmgerp.component.html',
-  styleUrls: ['./rmgerp.component.css']
+  styleUrls: ['./rmgerp.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class RmgerpComponent implements OnInit {
 

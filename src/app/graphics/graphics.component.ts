@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ContentService} from "../service/content.service";
+import {fade} from "../animation";
 
 @Component({
   selector: 'app-graphics',
   templateUrl: './graphics.component.html',
-  styleUrls: ['./graphics.component.css']
+  styleUrls: ['./graphics.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class GraphicsComponent implements OnInit {
 

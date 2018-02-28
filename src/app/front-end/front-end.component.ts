@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ContentService} from "../service/content.service";
+import {fade} from "../animation";
 
 declare var $: any;
 declare var introJs: any;
@@ -7,7 +8,10 @@ declare var introJs: any;
 @Component({
   selector: 'app-front-end',
   templateUrl: './front-end.component.html',
-  styleUrls: ['./front-end.component.css']
+  styleUrls: ['./front-end.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class FrontEndComponent implements OnInit {
 

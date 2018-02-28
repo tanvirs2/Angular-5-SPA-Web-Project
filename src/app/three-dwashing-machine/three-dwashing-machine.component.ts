@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ContentService} from "../service/content.service";
+import {fade} from "../animation";
 
 @Component({
   selector: 'app-three-dwashing-machine',
   templateUrl: './three-dwashing-machine.component.html',
-  styleUrls: ['./three-dwashing-machine.component.css']
+  styleUrls: ['./three-dwashing-machine.component.css'],
+  animations: [
+    fade
+  ]
 })
 export class ThreeDwashingMachineComponent implements OnInit {
 
